@@ -1,0 +1,189 @@
+:root {
+    --rose: #ecd6b7;
+    --black: #000000;
+    --coffee: #391d05;
+    --caramelo: #b55f14;
+}
+
+*{
+    color: var(--fontColor);
+    font-family: Montserrat;
+}
+
+header.page-header {
+    background: no-repeat left/cover url(bannerbolo3.jpg);
+    display: flex;
+    height: 120px;
+    min-width: 120px;
+    align-items: center;
+    --fontColor: var(--caramelo);
+}
+
+header.page-header > h1 {
+    font-family: Merienda , cursive;
+    margin: 2%;
+}
+
+h2 {
+    color: var(--coffee);
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.card_img{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 300px;
+  height: 300px;
+  margin: 25px;
+}
+
+.small_img{
+  height: 100%;
+  cursor: pointer;
+  transition: all linear 0.4s;
+}
+
+.small_img:hover{
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+.row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 80px;
+}
+
+div.desc{
+  width: 300px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+div.title {
+  padding: 15px;
+  color: var(--coffee);
+  font-size: medium;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+#modal_img{
+  width: 55vw;
+  transform: scale(0);
+  transition: all linear .3s;
+}
+
+.modal_active #modal_img{
+    transform: scale(1);
+}
+.modal{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
+    position: fixed;
+    visibility: hidden;
+    z-index: 1;
+    opacity: 0;
+    transition: visibility 0.8s linear, opacity 0.5s linear;
+}
+
+.modal_content{
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    height: 90vh;
+}
+
+#bt_close{
+    color:#fff;
+    background-color: rgba(56, 25, 7, 0.966);
+    position: absolute;
+    top:10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 25px;
+    border:solid 1px #fff;
+    transition: all ease-out .4s;
+    cursor: pointer;
+}
+#bt_close:hover{
+    background-color: rgb(250, 102, 69);
+}
+
+.modal_active{
+    visibility: visible;
+    opacity: 1;
+}
+   
+body {
+  background: var(--rose);
+   
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width:960px) {
+
+  .card_img{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    margin-bottom: 100px;
+  }
+
+  div.desc{
+    font-size: small;
+  }
+
+  .row{
+    padding-bottom: 40px;
+  }
+
+  .modal_active{
+    visibility:hidden;
+  }
+}
+
+
+@media screen and (min-width:961px) and (max-width:1366px) {
+
+  .card_img{
+    width: 200px;
+    height: 200px;
+    margin: 25px;
+    margin-bottom: 80px;
+  }
+
+  div.desc{
+    font-size: small;
+  }
+
+  .row{
+    padding-bottom: 40px;
+  }
+
+  .modal{
+
+    width: 100vh;
+    height: 50vh;
+  }
+
+  #modal_img{
+    width: 35vw;
+  }
+
+  .modal_content{
+    height: 50vh;
+  }
+  
+}
